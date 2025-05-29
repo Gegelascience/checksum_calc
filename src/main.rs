@@ -1,7 +1,9 @@
 mod ean_checksum;
+mod rib_checksum;
 use std::env;
 
-use ean_checksum::is_correct_ean;
+//use ean_checksum::is_correct_ean;
+use rib_checksum::calcul_checksum_rib_from_string;
 
 
 fn main() {
@@ -17,6 +19,8 @@ fn main() {
     println!("Value tested: {value_test}");
     println!("Mode: {mode}");
 
-    let r =is_correct_ean(value_test);
-    println!("{}",r);
+    //let r =is_correct_ean(value_test);
+    //println!("{}",r);
+    let key = calcul_checksum_rib_from_string(value_test);
+    println!("Checksum RIB: {}", key);
 }
