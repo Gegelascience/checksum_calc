@@ -39,7 +39,7 @@ pub fn is_correct_ean(ean_test: &str) -> bool {
 }
 
 /// Calculate the last digit of an ean
-fn calculate_digit_check(ean_digit_check_less:&str) -> u32 {
+pub fn calculate_digit_check(ean_digit_check_less:&str) -> u32 {
     
 
     let test_length = ean_digit_check_less.len();
